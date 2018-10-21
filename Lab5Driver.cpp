@@ -10,6 +10,7 @@
 #include <stack>
 #include <string>
 #include <vector>
+#include <list>
 using namespace std;
 
 // Lab5.2
@@ -58,6 +59,28 @@ string stringReversal2(string input) {
   return outputString;
 }
 
+// Lab 5.4
+string stringReversal3(string input) {
+  // Create a string to hold the result of the reversal
+  string outputString = "";
+
+  // Create a list to hold the data
+  list<char> l;
+
+  // Fill the list with the data from the string
+  for (int i = 0; i < input.length(); i++) {
+    l.push_back(input[i]);
+  }
+
+  // Pop the data to reverse the order
+  while(!l.empty()) {
+    outputString += l.back();
+    l.pop_back();
+  }
+
+  return outputString;
+}
+
 int main() {
 
   // Test Lab5.2
@@ -66,7 +89,11 @@ int main() {
 
   // Test Lab5.3
   cout << "Does Lab5.3 work?" << endl;
-  cout << stringReversal1("Does Lab5.3 work?") << endl;
+  cout << stringReversal2("Does Lab5.3 work?") << endl;
+
+  // Test Lab5.4
+  cout << "Things are looking well..." << endl;
+  cout << stringReversal3("Things are looking well...") << endl;
 
   return 0;
 }
