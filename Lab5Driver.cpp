@@ -13,6 +13,8 @@
 #include <list>
 using namespace std;
 
+#include "Lab5MyStack.h"
+
 // Lab5.2
 string stringReversal1(string input) {
   // Create a string to hold the result of the reversal
@@ -86,6 +88,19 @@ string stringReversal3(string input) {
 string stringReversal4(string input) {
   // Create a string to hold the returning value
   string outputString = "";
+
+  // Create a MyStack to hold the data
+  MyStack ms;
+
+  // Fill the vecotr with data from the string
+  for (int i = 0; i < input.length(); i++) {
+    ms.push(input[i]);
+  }
+
+  // Pop the data in reverse order
+  while (!ms.isEmpty()) {
+    outputString += ms.pull();
+  }
 
   // Return the result
   return outputString;
