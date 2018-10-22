@@ -78,6 +78,16 @@ string stringReversal3(string input) {
     l.pop_back();
   }
 
+  // Return the result
+  return outputString;
+}
+
+// Lab5.5
+string stringReversal4(string input) {
+  // Create a string to hold the returning value
+  string outputString = "";
+
+  // Return the result
   return outputString;
 }
 
@@ -85,15 +95,19 @@ int main() {
 
   // Test Lab5.2
   cout << "This is a test!" << endl;
-  cout << stringReversal1("This is a test!") << endl;
+  cout << stringReversal1("This is a test!") << endl << endl;
 
   // Test Lab5.3
   cout << "Does Lab5.3 work?" << endl;
-  cout << stringReversal2("Does Lab5.3 work?") << endl;
+  cout << stringReversal2("Does Lab5.3 work?") << endl << endl;
 
   // Test Lab5.4
   cout << "Things are looking well..." << endl;
-  cout << stringReversal3("Things are looking well...") << endl;
+  cout << stringReversal3("Things are looking well...") << endl << endl;
+
+  // Test Lab5.5
+  cout << "This is a final test." << endl;
+  cout << stringReversal4("This is a final test.") << endl << endl;
 
   return 0;
 }
